@@ -11,13 +11,13 @@
 
 #main.py
 
-file_path = "C:\\Users\\conno\\Downloads\\UCEnglish.txt"
+from TextFileExtractorPackage.TextFileExtractor import TextFileExtractor
 
-with open(file_path, "r") as file:
-    lines = file.readlines()
+def main():
+    file_path = "../Files/UCEnglish.txt"
+    line_numbers = [42061, 44404, 28799, 298, 8848, 27781, 105654, 21723, 47096, 8021, 28420, 19312, 22147, 42049, 23887, 599, 105655, 24232, 19312, 9443]
+    TextFileExtractor(file_path, line_numbers)
 
-line_numbers = [42061, 44404, 28799, 298, 8848, 27781, 105654, 21723, 47096, 8021, 28420, 19312, 22147, 42049, 23887, 599, 105655, 24232, 19312, 9443]
+if __name__ == "__main__":
+    main()
 
-for line_number in line_numbers:
-    line_content = lines[line_number ].strip()  # Adjusting for 0-based index
-    print(line_content)
