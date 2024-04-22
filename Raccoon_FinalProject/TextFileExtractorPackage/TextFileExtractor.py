@@ -5,8 +5,8 @@
 # Course/Section: IS4010-001
 # Semester/Year: Spring 2024
 # Brief Description of the assignment: Decrypt text and json files to uncover details about taking a group photo on campus with a movie quote
-# Brief Description of what this module does:
-# Citations:
+# Brief Description of what this module does: Extracts the code from the text file and decrypts the message. The message is where we need to have our photo taken.
+# Citations: Chat GPT
 # Anything else that's relevant:
 
 #TextFileExtractor.py
