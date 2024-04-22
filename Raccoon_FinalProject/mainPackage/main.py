@@ -13,20 +13,38 @@
 
 from TextFileExtractorPackage.TextFileExtractor import TextFileExtractor
 from ImageLoaderPackage.ImageLoaderClass import ImageLoader
+from messageDecryptorPackage.messageDecryptor import MessageDecryptor
+from jsonReaderPackage.jsonReader import jsonReader
 
-def main():
-    # TextFileExtractor
-    file_path = "../Files/UCEnglish.txt"
-    line_numbers = [42061, 44404, 28799, 298, 8848, 27781, 105654, 21723, 47096, 8021, 28420, 19312, 22147, 42049, 23887, 599, 105655, 24232, 19312, 9443]
-    TextFileExtractor(file_path, line_numbers)
+# File paths
+text_file_path = "../Files/UCEnglish.txt"
+json_file_path = "../Files/TeamsAndEncryptedMessagesForDistribution - 001.json"
+image_file_path = "../Files/sample_image.jpg"
 
-    # ImageLoader
-    image_path = "../Files/sample_image.jpg"
-    image_loader = ImageLoader(image_path)
-    image = image_loader.load_image()
+# TextFileExtractor
+line_numbers = [42061, 44404, 28799, 298, 8848, 27781, 105654, 21723, 47096, 8021, 28420, 19312, 22147, 42049, 23887, 599, 105655, 24232, 19312, 9443]
+print("Extracted lines from text file:")
+TextFileExtractor(text_file_path, line_numbers)
+print()
 
-    # Print the image to the console
-    print(image)
+# MessageDecryptor
+key = b'LMV69IGGTp2Gyn4TI-DTuupf0VvugeC5API5dpeoiqM='
+decryptor = MessageDecryptor(key)
+json_reader = jsonReader(json_file_path)
+movie_data = json_reader.get_raccoon_data()
+str_movie_message = ''.join([str(item) for item in movie_data])
+encrypted_message = str_movie_message
+decrypted_message = decryptor.decrypt(encrypted_message)
+print("Decrypted message:")
+print(decrypted_message)
+print()
 
-if __name__ == "__main__":
-    main()
+# ImageLoader
+image_loader = ImageLoader(image_file_path)
+image = image_loader.load_image()
+
+# Print the image to the console
+print("Loaded image:")
+print(image)
+
+
