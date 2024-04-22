@@ -11,8 +11,6 @@
 
 #main.py
 
-from TextFileExtractorPackage.TextFileExtractor import TextFileExtractor
-
 def main():
     file_path = "../Files/UCEnglish.txt"
     line_numbers = [42061, 44404, 28799, 298, 8848, 27781, 105654, 21723, 47096, 8021, 28420, 19312, 22147, 42049, 23887, 599, 105655, 24232, 19312, 9443]
