@@ -11,7 +11,7 @@
 
 #main.py
 
-file_path = "C:\\Users\\conno\\Downloads\\UCEnglish.txt"
+file_path = "../Files/UCEnglish.txt"
 
 with open(file_path, "r") as file:
     lines = file.readlines()
