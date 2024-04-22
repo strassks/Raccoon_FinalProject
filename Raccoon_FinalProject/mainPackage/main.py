@@ -11,8 +11,7 @@
 
 #main.py
 
-from TextFileExtractorPackage.TextFileExtractor import TextFileExtractor
-from messageDecryptorPackage.messageDecryptor import*
+
 
 if __name__ == "__main__":
     def main():
