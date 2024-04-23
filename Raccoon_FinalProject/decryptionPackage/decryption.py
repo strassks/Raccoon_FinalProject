@@ -30,6 +30,10 @@ def decrypt_location(encrypted_data, english_file):
             print(f"Index {index} is out of range.")
     
     return decrypted_location.strip()
+def decrypt_message(encrypted_message, key):
+    f = Fernet(key)
+    decrypted_message = f.decrypt(encrypted_message)
+    return    decrypted_message.decode('utf-8')
 
 
 
