@@ -11,6 +11,7 @@
 
 #main.py
 
+from Files import *
 from decryptionPackage.decryption import *
 from ImageLoaderPackage.ImageLoaderClass import *
 if __name__ == "__main__":
@@ -28,7 +29,7 @@ if __name__ == "__main__":
     print("Decrypted Movie Name:", decrypted_movie)
     
     # ImageLoader
-    image_loader = ImageLoader(image_file_path)
+    image_loader = ImageLoader("../Files/IMG_4589.jpg")
     image = image_loader.load_image()
     
     # Print the image to the console
